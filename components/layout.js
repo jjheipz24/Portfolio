@@ -15,7 +15,7 @@ export default function Layout({ children }) {
                         {children}
                     </div>
                     <div className={styles.vidContainer}>
-                        <video autoPlay loop muted poster="/images/space-background.png" className={styles.bgVideo}>
+                        <video autoPlay loop muted className={styles.bgVideo}>
                             <source src="/videos/space-background.mp4" type="video/mp4" />
                             <source src="/videos/space-background.mov" type="video/mov" />
                             <source src="/videos/space-background.wmv" type="video/wmv" />

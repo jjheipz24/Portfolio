@@ -6,11 +6,19 @@
   color: white;
 
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
 
   }
-  p{
-    font-size: 2rem;
+
+  p {
+    font-size: 1.5rem;
   }
 
+}
+
+.siteLink {
+  a {
+    text-decoration: none;
+    color: #0086F0;
+  }
 }

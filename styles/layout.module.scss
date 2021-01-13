@@ -1,0 +1,27 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .children {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        background: rgba(0,0,0,0.2);
+        width: 100%;
+        height: 100vh;
+    }
+
+    .vidContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+}

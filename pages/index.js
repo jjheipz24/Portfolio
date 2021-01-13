@@ -4,6 +4,11 @@ import Layout from '../components/layout.js'
 
 export default function Home() {
   return (
-   <Layout></Layout>
+    <Layout>
+      <div className={styles.container}>
+        <h1>Hi, I'm Jin Jin</h1>
+        <p>My site is currently under construction. Check back soon.</p>
+      </div>
+    </Layout>
   )
 }

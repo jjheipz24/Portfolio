@@ -4,7 +4,6 @@ import React from 'react'
 import NavBar from './navbar.js'
 
 export default function Layout({ children }) {
-
     return (
         <div>
             <Head>

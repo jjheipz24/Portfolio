@@ -1,20 +1,33 @@
-.button{
+.button {
     background-color: none;
     background: none;
     border: 2px solid white;
     margin: 1.2em;
     padding: .5em 2em;
 
-    .title{
+    .title {
         color: white;
         font-size: 1.2rem;
     }
 
-    .title:hover{
+    .title:hover {
         text-decoration: none;
     }
 }
 
-.button:hover{
+.button:hover {
     transform: scale(1.05);
+}
+
+@media only screen and (min-device-width : 600px) and (max-device-width: 1024px) {
+    .button {
+        transform: scale(.8);
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .button{
+        transform: scale(1.2);
+        margin: 3em;
+    }
 }

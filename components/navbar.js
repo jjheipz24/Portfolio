@@ -8,7 +8,7 @@ export default function NavBar() {
         <Navbar className={`navbar-dark ${styles.navbar}`} expand="lg">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" className={styles.hamburger} />
             <Navbar.Collapse id="responsive-navbar-nav" className={styles.collapsedBar}>
-                <Nav className="justify-content-end ml-auto">
+                <Nav className="ml-auto itemMenu">
                     <Nav.Item className={styles.item}>
                         <Link href="/">
                             <a className={styles.linkItem}>Home</a>

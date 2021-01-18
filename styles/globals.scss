@@ -11,8 +11,12 @@ a {
   text-decoration: none;
 }
 
-.fas {
+.fas, .fab {
   color: white;
+}
+
+.social:hover{
+  transform: scale(1.1);
 }
 
 * {

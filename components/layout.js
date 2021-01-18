@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/layout.module.scss'
 import React from 'react'
 import NavBar from './navbar.js'
+import SocialMedia from './socialmedia.js'
 
 export default function Layout({ children }) {
     return (
@@ -15,6 +16,10 @@ export default function Layout({ children }) {
                 <div className={styles.container}>
                     <div className={styles.children}>
                         {children}
+                        <footer className={styles.footer}>
+                            <SocialMedia></SocialMedia>
+                            <p>&copy; 2021 Jin Jin Heipler</p>
+                        </footer>
                     </div>
                     <div className={styles.vidContainer}>
                         <video playsInline autoPlay loop muted poster="/images/space-background.png" className={styles.bgVideo}>

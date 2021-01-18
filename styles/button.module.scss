@@ -1,8 +1,8 @@
 .button{
     background-color: none;
     background: none;
-    border: 1px solid white;
-    margin: 1em;
+    border: 2px solid white;
+    margin: 1.2em;
     padding: .5em 2em;
 
     .title{
@@ -16,5 +16,5 @@
 }
 
 .button:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }

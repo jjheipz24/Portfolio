@@ -5,7 +5,7 @@ import Button from '../components/button.js'
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout type="clear">
       <div className={styles.container}>
           <div className={styles.left}>
             <h1>Hi, I'm Jin Jin</h1>

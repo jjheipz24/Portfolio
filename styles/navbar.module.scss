@@ -4,7 +4,7 @@
     top: 0;
     width: 100%;
     z-index: 10;
-    background-color: transparent;
+    padding-bottom: 1em;
 
     .item{
         margin-right: 2em;
@@ -35,6 +35,14 @@
 
 }
 
+.default{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.clear{
+    background-color: transparent;
+}
+
   /* Smartphones (portrait) ----------- */
   @media only screen and (min-device-width : 320px) and (max-device-width : 600px) {
       .navbar{
@@ -47,12 +55,12 @@
             left: 0;
             padding-top: 1em;
             margin: 0;
-            background-color: gray;
+            background-color: rgba(0, 0, 0, 0.9);
         }
 
         .item{
             padding-bottom: 1em;
-            border-bottom: 1px solid #adadad;
+            border-bottom: 1px solid #494949;
             width: 100%;
         }
       }

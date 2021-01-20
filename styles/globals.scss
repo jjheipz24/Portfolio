@@ -1,21 +1,28 @@
 html,
 body {
+  height: 100%;
   padding: 0;
   margin: 0;
   font-family: 'Space Grotesk', sans-serif !important;
   // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
 }
 
-.fas, .fab {
+p {
   color: white;
 }
 
-.social:hover{
+.fas,
+.fab {
+  color: white;
+}
+
+.social:hover {
   transform: scale(1.1);
 }
 

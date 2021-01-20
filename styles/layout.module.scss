@@ -1,37 +1,60 @@
-//Content
-.container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    overflow: hidden;
+@mixin coverer {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
-    .children {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-        background: rgba(0, 0, 0, 0.2);
-        width: 100%;
-        height: 100vh;
+.vidContainer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.vidContainer {
+    position: absolute;
+    text-align: center;
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &,
+    .bgVideo {
+        @include coverer;
     }
 
-    .vidContainer {
-        //position: absolute;
+    .bgVideo {
         object-fit: cover;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        z-index: -1;
+    }
+}
+
+.children {
+    position: relative;
+    height: 100%;
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    &::before {
+        content: "";
+        @include coverer;
+        top: -100vh;
     }
 
     .footer {
-        position: fixed;
+        //position: absolute;
         bottom: 0;
         width: 300px;
         text-align: center;

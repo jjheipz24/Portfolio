@@ -1,0 +1,50 @@
+.projectLayout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.projectList {
+    color: #00223D;
+
+    .project {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        // background: rgba(255, 255, 255, .08);
+        list-style: none;
+        margin-bottom: 2em;
+        border-radius: 5px;
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.02);
+        }
+        .projectImg{
+            border-radius: 5px 0 0 5px;
+        }
+        .info{
+            margin-bottom: 1em;
+        }
+        h4{
+            // color: white;
+            margin: 1em 0 -.5em .5em;
+            font-weight: 600;
+        }
+
+        p {
+            color: #00223D;
+            // color: white;
+            width: 35vw;
+            margin-left: 1em;
+        }
+
+        a{
+            font-weight: 500;
+            color: #0086F0;
+            float: right;
+            margin-right: 1em;
+        }
+    }
+}

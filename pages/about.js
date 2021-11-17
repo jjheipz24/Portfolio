@@ -17,19 +17,19 @@ export default function About() {
             width={250}
             height={333}
           />
-          <p><b>Hobbies: </b> Running, Lifting, Rugby, Drumming, Singing, Some gaming, Playing with my cat</p>
+          <p><b>Hobbies: </b> CrossFit, Running, Rugby, Drumming, Singing, Gaming, Playing with my cat</p>
         </div>
         <div className={styles.right}>
-          <p>Hi! My name is Jin Jin Heipler, and I’m from Shrewsbury, Massachusetts. I’m currently in my fourth and final year at the Rochester Institute of Technology, and I will be graduating in May 2021 with a Bachelor of Science in New Media Interactive Development and minors in Mobile Development and Communication.
+          <p>Hi! My name is Jin Jin Heipler, and I’m from Shrewsbury, Massachusetts but am now living in Concord, Massachusetts. I recently graduated from the Rochester Institute of Technology with a Bachelor of Science in New Media Interactive Development and minors in Mobile Development and Communication.
             <br></br>
             <br></br>
             Ever since I was young, I knew I wanted to work with computers and code. My creative side, however, knew that I didn’t want to just type meaningless code. I wanted my projects to come alive. I was fascinated with and inspired by the games and other electronic devices I interacted with and how they were created, and I was constantly thinking of new things I could one day make.
             <br></br>
             <br></br>
-            Throughout my time at RIT, I fell in love with all things UX/UI and front-end development. Watching ideas in my head become fully-functional, interactive applications on my screen made me realize that this was somerhing I wanted to do for the rest of my life.
+            During my time at RIT, I fell in love with all things UI/UX and front-end development. Watching ideas in my head become fully-functional, interactive applications on my screen made me realize that this was something I wanted to do for the rest of my life.
             <br></br>
             <br></br>
-            With two software engineering internships under my belt, along with experience in full-stack and front-end development, I’m ready for the next opportunity that will entice my curiosity and problem-solving skills to produce beautiful, clean, interactive user-experiences.
+            I have worked at both MassMutual and Constant Contact as a software engineer intern, and I currently work full-time as a Junior Front-End Developer at Booz Allen Hamilton. With my experience in full-stack and front-end development, I’m always ready for opportunities that will entice my curiosity and problem-solving skills to produce beautiful, clean, interactive user-experiences.
           </p>
         </div>
       </div>

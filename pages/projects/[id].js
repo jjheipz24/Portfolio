@@ -3,6 +3,7 @@ import { getAllProjectIds, getProjectData } from '../../lib/projects'
 import Date from '../../components/date'
 import Image from 'next/image'
 import Head from 'next/head'
+import Link from 'next/link'
 
 export async function getStaticProps({ params }) {
     const projectData = await getProjectData(params.id)
@@ -24,6 +25,9 @@ export async function getStaticPaths() {
 export default function Project({ projectData }) {
     return (
         <Layout>
+            <Link href="/projects">
+                <a>Back</a>
+            </Link>
             <Head>
                 <title>{projectData.title}</title>
             </Head>
@@ -39,6 +43,7 @@ export default function Project({ projectData }) {
             <br />
             <Date dateString={projectData.date} />
             <br />
+            <a href={projectData.link}>Link</a>
             <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
         </Layout>
     )

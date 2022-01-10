@@ -15,7 +15,7 @@ function FadeInWhenVisible({ children }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      transition={{ duration: .6 }}
+      transition={{ duration: .8 }}
       variants={{
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0 }
@@ -35,6 +35,10 @@ export async function getStaticProps() {
   }
 }
 export default function Projects({ allProjectsData }) {
+  const webArray = allProjectsData.filter(project => !project.mobile);
+  const mobileArray = allProjectsData.filter(project => project.mobile);
+  console.log(webArray);
+  console.log(mobileArray);
 
   //Variables for controlling which projects to show
   const [web, setWeb] = useState(true);
@@ -113,7 +117,7 @@ export default function Projects({ allProjectsData }) {
             transition={{ duration: .5 }}>
             <h1 className={webClass} onClick={() => handleActive('web')}>Web</h1>
             <h1 className={mobileClass} onClick={() => handleActive('mobile')}>Mobile</h1>
-            <h1 className={designClass} onClick={() => handleActive('design')}>Design</h1>
+            {/* <h1 className={designClass} onClick={() => handleActive('design')}>Design</h1> */}
           </motion.div>
         </div>
 
@@ -121,29 +125,52 @@ export default function Projects({ allProjectsData }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: .2, duration: 2 }}>
-          {allProjectsData.map(({ id, date, img, title, blurb }) => (
-            <FadeInWhenVisible>
-              <Link href={`/projects/${id}`} key={id}>
-                <li className={styles.project}>
-                  <Image src={img}
-                    className={styles.projectImg}
-                    alt="Placeholder"
-                    width={160}
-                    height={160}>
-                  </Image>
-                  <div className={styles.info}>
-                    <h4>{title}</h4>
-                    <br />
-                    <p>{blurb}</p>
-                    {/* <Date dateString={date} /> */}
-                  </div>
-                  <Link href={`/projects/${id}`}>
-                    <a className={styles.projectLink}>LEARN MORE</a>
-                  </Link>
-                </li>
-              </Link>
-            </FadeInWhenVisible>
-          ))}
+          {web ?
+            webArray.map(({ id, img, title, blurb }) => (
+              <FadeInWhenVisible key={id}>
+                <Link href={`/projects/${id}`}>
+                  <li className={styles.project}>
+                    <Image src={img}
+                      className={styles.projectImg}
+                      alt="Placeholder"
+                      width={160}
+                      height={160}>
+                    </Image>
+                    <div className={styles.info}>
+                      <h4>{title}</h4>
+                      <br />
+                      <p>{blurb}</p>
+                      {/* <Date dateString={date} /> */}
+                    </div>
+                    <Link href={`/projects/${id}`}>
+                      <a className={styles.projectLink}>LEARN MORE</a>
+                    </Link>
+                  </li>
+                </Link>
+              </FadeInWhenVisible>
+            )) :
+            mobileArray.map(({ id, img, title, blurb }) => (
+              <FadeInWhenVisible key={id}>
+                <Link href={`/projects/${id}`}>
+                  <li className={styles.project}>
+                    <Image src={img}
+                      className={styles.projectImg}
+                      alt="Placeholder"
+                      width={160}
+                      height={160}>
+                    </Image>
+                    <div className={styles.info}>
+                      <h4>{title}</h4>
+                      <br />
+                      <p>{blurb}</p>
+                    </div>
+                    <Link href={`/projects/${id}`}>
+                      <a className={styles.projectLink}>LEARN MORE</a>
+                    </Link>
+                  </li>
+                </Link>
+              </FadeInWhenVisible>))
+          }
           <p>More projects can be found <a href="https://jxh9922.tumblr.com">here</a></p>
         </motion.ul>
       </div>

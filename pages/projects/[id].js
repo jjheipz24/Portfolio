@@ -29,10 +29,10 @@ export default function Project({ projectData }) {
             </Head>
             {projectData.title}
             <Image
-                src={projectData.img}
+                src={projectData.mainImg}
                 alt="Placeholder"
-                width={250}
-                height={250}
+                width={800}
+                height={600}
             />
             <br />
             {projectData.id}

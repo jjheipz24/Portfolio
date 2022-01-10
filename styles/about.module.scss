@@ -14,23 +14,25 @@
         width: 280px;
         margin-right: 5em;
 
-        .profilePic{
+        .profilePic {
             border-radius: 10px;
         }
 
-        p{
+        p {
             margin-top: 1.5em;
         }
     }
 
     .right {
         max-width: 650px;
-        background: rgba(0, 0, 0, 0.8);
+        // background: rgba(0, 0, 0, 0.8);
+        background: rgba(255, 255, 255, 0.8);
         padding: 2em;
         border-radius: 10px;
-        
+
 
         p {
+            color: #00223D;
             font-size: 1.2rem;
         }
     }

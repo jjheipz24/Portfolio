@@ -9,6 +9,23 @@ import Layout from '../components/layout.js'
 import { motion } from 'framer-motion'
 import { getSortedProjectsData } from '../lib/projects'
 
+function FadeInWhenVisible({ children }) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: .6 }}
+      variants={{
+        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0 }
+      }}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
 export async function getStaticProps() {
   const allProjectsData = getSortedProjectsData()
   return {
@@ -89,39 +106,45 @@ export default function Projects({ allProjectsData }) {
   return (
     <Layout>
       <div className={styles.projectLayout}>
-        <motion.div className={styles.titles}
-          initial={{ y: -250 }}
-          animate={{ y: 0 }}
-          transition={{duration: .5}}>
-          <h1 className={webClass} onClick={() => handleActive('web')}>Web</h1>
-          <h1 className={mobileClass} onClick={() => handleActive('mobile')}>Mobile</h1>
-          <h1 className={designClass} onClick={() => handleActive('design')}>Design</h1>
-        </motion.div>
+        <div>
+          <motion.div className={styles.titles}
+            initial={{ y: -250 }}
+            animate={{ y: 0 }}
+            transition={{ duration: .5 }}>
+            <h1 className={webClass} onClick={() => handleActive('web')}>Web</h1>
+            <h1 className={mobileClass} onClick={() => handleActive('mobile')}>Mobile</h1>
+            <h1 className={designClass} onClick={() => handleActive('design')}>Design</h1>
+          </motion.div>
+        </div>
+
         <motion.ul className={styles.projectList}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: .2, duration: 2 }}>
           {allProjectsData.map(({ id, date, img, title, blurb }) => (
-            <Link href={`/projects/${id}`} key={id}>
-              <li className={styles.project}>
-                <Image src={img}
-                  className={styles.projectImg}
-                  alt="Placeholder"
-                  width={150}
-                  height={150}>
-                </Image>
-                <div className={styles.info}>
-                  <h4>{title}</h4>
-                  <br />
-                  <p>{blurb}</p>
-                  {/* <Date dateString={date} /> */}
-                </div>
-                <Link href={`/projects/${id}`}>
-                  <a className={styles.projectLink}>LEARN MORE</a>
-                </Link>
-              </li>
-            </Link>
+            <FadeInWhenVisible>
+              <Link href={`/projects/${id}`} key={id}>
+                <li className={styles.project}>
+                  <Image src={img}
+                    className={styles.projectImg}
+                    alt="Placeholder"
+                    width={160}
+                    height={160}>
+                  </Image>
+                  <div className={styles.info}>
+                    <h4>{title}</h4>
+                    <br />
+                    <p>{blurb}</p>
+                    {/* <Date dateString={date} /> */}
+                  </div>
+                  <Link href={`/projects/${id}`}>
+                    <a className={styles.projectLink}>LEARN MORE</a>
+                  </Link>
+                </li>
+              </Link>
+            </FadeInWhenVisible>
           ))}
+          <p>More projects can be found <a href="https://jxh9922.tumblr.com">here</a></p>
         </motion.ul>
       </div>
     </Layout>

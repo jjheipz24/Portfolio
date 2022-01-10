@@ -29,7 +29,7 @@ export default function Project({ projectData }) {
                 <a>Back</a>
             </Link>
             <Head>
-                <title>{projectData.title}</title>
+                <title>{projectData.title} - Jin Jin Heipler</title>
             </Head>
             {projectData.title}
             <Image

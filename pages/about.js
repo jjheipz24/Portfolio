@@ -24,7 +24,7 @@ export default function About() {
   return (
     <Layout>
       <Head>
-        <title>Jin Jin Heipler - About</title>
+        <title>About - Jin Jin Heipler</title>
       </Head>
       <div className={styles.container}>
         <motion.div className={styles.left}

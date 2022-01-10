@@ -109,6 +109,9 @@ export default function Projects({ allProjectsData }) {
   }
   return (
     <Layout>
+      <Head>
+        <title>Projects - Jin Jin Heipler</title>
+      </Head>
       <div className={styles.projectLayout}>
         <div>
           <motion.div className={styles.titles}

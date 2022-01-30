@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/about.module.scss'
-import Layout from '../components/layout.js'
+import Layout from '../components/layout'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Date from '../components/date'
 import Image from 'next/image'
 import styles from '../styles/projects.module.scss'
-import Layout from '../components/layout.js'
+import Layout from '../components/layout'
 import { motion } from 'framer-motion'
 import { getSortedProjectsData } from '../lib/projects'
 
@@ -174,7 +174,7 @@ export default function Projects({ allProjectsData }) {
                 </Link>
               </FadeInWhenVisible>))
           }
-          <p>More projects can be found <a href="https://jxh9922.tumblr.com">here</a></p>
+          <p className={styles.moreProjects}>More projects can be found <a href="https://jxh9922.tumblr.com">here</a></p>
         </motion.ul>
       </div>
     </Layout>

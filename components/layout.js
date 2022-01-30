@@ -6,7 +6,7 @@ import SocialMedia from './socialmedia.js'
 
 export default function Layout({ children, type }) {
     return (
-        <div>
+        <div className={styles.full}>
             <Head>
                 <title>Jin Jin Heipler</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />

@@ -5,7 +5,7 @@ blurb: 'An application that gives users movie recommendations based on books the
 img: '/images/bookwatch-main.png'
 link: 'https://jjheipz24.github.io/IGME330-Project2/index.html'
 technology: 'HTML, CSS, Vue.js, Bootstrap, OpenLibrary API, TasteDive API, OMDb API, Firebase'
-mainImg: '/images/sprout.png'
+media: ['/images/bookwatch/bookwatch1.png', 'BookWatch home screen']
 ---
 
-This is just a test. There is no real content here yet.
+*Due to third-party API issues, this project no longer works :(

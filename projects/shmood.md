@@ -5,7 +5,7 @@ blurb: 'A personalized mood board creation site that allows users to upload imag
 img: '/images/shmood-main.png'
 link: 'https://shmood.herokuapp.com/'
 technology: 'HTML, CSS, React, Node.js, Express, MongoDB, Redis, Handlebars, Bootstrap'
-mainImg: '/images/sprout.png'
+media: [['/images/shmood/shmood1.png', 'shmood home screen'], ['/images/shmood/shmood2.png', 'shmood signup screen'], ['/images/shmood/shmood3.png', 'shmood image upload modal'], ['/images/shmood/shmood4.png', 'shmood user page']]
 ---
 
 This is just a test. There is no real content here yet.

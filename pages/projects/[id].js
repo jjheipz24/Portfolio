@@ -28,6 +28,8 @@ export async function getStaticPaths() {
 }
 
 export default function Project({ projectData }) {
+    const mediaArr = projectData.media
+    const isMobile = projectData.mobile;
     return (
         <Layout>
             {/* <Link href="/projects">
@@ -45,38 +47,44 @@ export default function Project({ projectData }) {
                     </div>
                     <Button link={projectData.link} title="VIEW WEBSITE"></Button>
                 </div>
-                {/* <Image
-                    src={projectData.mainImg}
-                    alt="Placeholder"
-                    width={800}
-                    height={600}
-                    className={styles.projImg}
-                /> */}
-                <div className={styles.carouselSection}>
-                    <div className="carousel-wrapper">
-                        <Carousel
-                            infiniteLoop
-                            useKeyboardArrows
-                            autoPlay
-                            showThumbs={false}
-                            showStatus={false}>
-                            <div>
-                                <img src={projectData.media1}></img>
+                {isMobile ?
+                    <div className={styles.isMobile}>
+                        <div className={styles.mobileCarousel}>
+                            {mediaArr.map((pic, index) => {
+                                return (
+                                    <div key={index} className={styles.mobileImgContainer}>
+                                        <img src={pic[0]} alt={pic[1]} className={styles.mobileImg}></img>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        <div className={styles.mainContent}>
+                            <div className={styles.description} dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+                        </div>
+                    </div> :
+                    <div>
+                        <div className={styles.carouselSection}>
+                            <div className="carousel-wrapper">
+                                <Carousel
+                                    infiniteLoop
+                                    useKeyboardArrows
+                                    autoPlay
+                                    showThumbs={false}
+                                    showStatus={false}
+                                    transitionTime={600}>
+                                    {mediaArr.map((pic, index) => {
+                                        return (
+                                            <div key={index}>
+                                                <img src={pic[0]} alt={pic[1]}></img>
+                                            </div>
+                                        )
+                                    })}
+                                </Carousel>
                             </div>
-                            <div>
-                                <img src={projectData.media2}></img>
-                            </div>
-                            <div>
-                                <img src={projectData.media3}></img>
-                            </div>
-                        </Carousel>
-                    </div>
-                </div>
-                <div className={styles.mainContent}>
-                    <div className={styles.description} dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
-
-                </div>
-
+                        </div>
+                        <div className={styles.mainContent}>
+                            <div className={styles.description} dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+                        </div></div>}
             </motion.div>
         </Layout>
     )

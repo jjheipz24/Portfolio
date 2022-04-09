@@ -143,7 +143,6 @@ export default function Projects({ allProjectsData }) {
                       <h4>{title}</h4>
                       <br />
                       <p>{blurb}</p>
-                      {/* <Date dateString={date} /> */}
                     </div>
                     <Link href={`/projects/${id}`}>
                       <a className={styles.projectLink}>LEARN MORE</a>

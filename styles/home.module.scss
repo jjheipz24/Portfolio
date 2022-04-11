@@ -1,24 +1,127 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  /*
+ * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+ */
 
-  h1 {
-    font-size: 3rem;
+  /* Desktops and laptops ----------- */
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5em;
+    margin-top: 8vh;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      max-width: 30vw;
+      margin-right: 3em;
+
+      h1 {
+        font-size: 3.1rem;
+        font-weight: 700;
+        margin-bottom: .3em;
+      }
+
+      p {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      span {
+        color: #31CEFF;
+        font-weight: 500;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      margin-left: 3em;
+    }
 
   }
 
-  p {
-    font-size: 1.5rem;
+  /* Smart devices (landscape) ----------- */
+  @media only screen and (min-device-width : 600px) and (max-device-width: 1024px) {
+    .container {
+      flex-direction: column;
+
+      .left {
+        max-width: 60vw;
+        margin-right: 0;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+
+      .right {
+        flex-direction: row;
+        margin: 0;
+      }
+    }
   }
 
-}
+  /* Smartphones (portrait) ----------- */
+  @media only screen and (min-device-width : 320px) and (max-device-width : 600px) {
+    .container {
+      flex-direction: column;
 
-.siteLink {
-  a {
-    text-decoration: none;
-    color: #0086F0;
+      .left {
+        max-width: 100%;
+        align-items: center;
+        margin: 0 1.2em;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+          text-align: center;
+        }
+      }
+
+      .right {
+        margin-top: 3em;
+        margin-left: 0;
+      }
+    }
   }
-}
+
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .container {
+      flex-direction: column;
+
+      .left {
+        max-width: 100%;
+        align-items: center;
+        margin: 0 5em;
+
+        h1 {
+          font-size: 3rem;
+        }
+
+        p {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+      }
+
+      .right {
+        margin-top: 3em;
+        margin-left: 0;
+      }
+    }
+  }

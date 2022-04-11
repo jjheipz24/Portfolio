@@ -8,4 +8,4 @@ technology: 'HTML, CSS, React, Node.js, Express, MongoDB, Redis, Handlebars, Boo
 media: [['/images/shmood/shmood1.png', 'shmood home screen'], ['/images/shmood/shmood2.png', 'shmood signup screen'], ['/images/shmood/shmood3.png', 'shmood image upload modal'], ['/images/shmood/shmood4.png', 'shmood user page']]
 ---
 
-This is just a test. There is no real content here yet.
+Project details coming soon!

@@ -7,5 +7,6 @@ link: 'https://jjheipz24.github.io/IGME330-Project2/index.html'
 technology: 'HTML, CSS, Vue.js, Bootstrap, OpenLibrary API, TasteDive API, OMDb API, Firebase'
 media: ['/images/bookwatch/bookwatch1.png', 'BookWatch home screen']
 ---
+Project details coming soon!
 
 *Due to third-party API issues, this project no longer works :(

@@ -30,7 +30,7 @@ export default function NavBar({type}) {
                         </Link>
                     </Nav.Item>
                     <Nav.Item className={styles.item}>
-                        <Link href="/">
+                        <Link href="/resume">
                             <a className={styles.linkItem}>Resume</a>
                         </Link>
                     </Nav.Item>
